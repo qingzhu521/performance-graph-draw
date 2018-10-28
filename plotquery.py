@@ -459,7 +459,7 @@ if __name__ == '__main__':
     is_legend = True
     #plot_bar('vary_data_q0dataset', 'q0', vary_dataset_datasets, algs, vary_dataset_q0, True);
     for name in vary_dataset_queries.keys():
-        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
+        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
         plt.close()
         is_legend = False
 
@@ -490,6 +490,6 @@ if __name__ == '__main__':
     xlabel = ['q0','q1','q2','q3','q4','q5','q6','q7','q8','q9']
     is_legend = True
     for name in var_query_datasets.keys():
-        #plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name],is_legend)
+        plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name],is_legend)
         plt.close()
         is_legend = False
