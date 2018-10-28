@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ed06508-6548-433f-bb19-eda2fda9914a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_var_density_legend.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_var_density_legend.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_var_density_query3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_var_density_query3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_var_density_query6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_var_density_query6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_var_labelled_legend.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_var_labelled_legend.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_var_labelled_query3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_var_labelled_query3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_var_labelled_query6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_var_labelled_query6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_vary_workers_legend.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_vary_workers_legend.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_vary_workers_query3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_vary_workers_query3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_labelled_vary_workers_query6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_labelled_vary_workers_query6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_communication_legend.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_communication_legend.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_communication_query1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_communication_query1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_communication_query2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_communication_query2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_communication_query3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_communication_query3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_mem_legend.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_mem_legend.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_mem_query1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_mem_query1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_mem_query2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_mem_query2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_lj_mem_query3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_lj_mem_query3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_vary_workers_legend.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_vary_workers_legend.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_vary_workers_query1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_vary_workers_query1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_vary_workers_query2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_vary_workers_query2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/scalability_vary_workers_query3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/scalability_vary_workers_query3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q0.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q0.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q7.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q7.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q8.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q8.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_dataset_q9.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_dataset_q9.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_legend.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_legend.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q0.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q0.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/vary_labelled_dataset_q7.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/vary_labelled_dataset_q7.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotquery.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotquery.py" afterDir="false" />
-    </list>
+    <list default="true" id="6ed06508-6548-433f-bb19-eda2fda9914a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +19,7 @@
       <file leaf-file-name="plotquery.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plotquery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="-2706">
               <caret line="9" column="24" selection-start-line="9" selection-end-line="10" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -75,8 +31,8 @@
       <file leaf-file-name="plot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="226" selection-start-line="226" selection-end-line="226" />
+            <state relative-caret-position="161">
+              <caret line="477" column="20" lean-forward="true" selection-start-line="477" selection-start-column="20" selection-end-line="477" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -222,7 +178,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1275" />
@@ -358,15 +314,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50104165" side_tool="true" visible="true" weight="0.32392895" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50104165" side_tool="true" visible="true" weight="0.18077324" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.32392895" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.18077324" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49947917" weight="0.31870428" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19479166" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -762,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plotquery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="-2706">
           <caret line="9" column="24" selection-start-line="9" selection-end-line="10" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -772,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        <state relative-caret-position="161">
+          <caret line="477" column="20" lean-forward="true" selection-start-line="477" selection-start-column="20" selection-end-line="477" selection-end-column="20" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
