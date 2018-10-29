@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ed06508-6548-433f-bb19-eda2fda9914a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotquery.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotquery.py" afterDir="false" />
-    </list>
+    <list default="true" id="6ed06508-6548-433f-bb19-eda2fda9914a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,13 +13,34 @@
     <SUITE FILE_PATH="coverage/patmat_plot$plotquery.coverage" NAME="plotquery Coverage Results" MODIFIED="1540797394994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/patmat_plot$plot.coverage" NAME="plot Coverage Results" MODIFIED="1540799159219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1133920696">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="plot.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="489" column="52" selection-start-line="489" selection-start-column="19" selection-end-line="489" selection-end-column="52" />
+            <state relative-caret-position="1822">
+              <caret line="513" column="51" selection-start-line="513" selection-start-column="51" selection-end-line="513" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plotquery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -98,11 +115,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="834" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="833" />
     <option name="y" value="20" />
-    <option name="width" value="1096" />
-    <option name="height" value="1053" />
+    <option name="width" value="1097" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -115,13 +132,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="patmat_plot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patmat_plot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patmat_plot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patmat_plot" type="462c0819:PsiDirectoryNode" />
-              <item name="figures" type="462c0819:PsiDirectoryNode" />
+              <item name="performance-graph-draw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="performance-graph-draw" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -151,15 +163,15 @@
   </component>
   <component name="RunManager" selected="Python.plot">
     <configuration name="plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="patmat_plot" />
+      <module name="performance-graph-draw" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\runenv\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -168,6 +180,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="plot_double_decker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="patmat_plot" />
@@ -187,6 +202,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="plotquery" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="patmat_plot" />
@@ -206,6 +224,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.plotquery" />
@@ -234,54 +255,54 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="892" y="153" width="1096" height="1053" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50104165" side_tool="true" weight="0.3291536" />
-      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="5" side_tool="true" weight="0.0010416667" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49895832" weight="0.3291536" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.1832627" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49947917" weight="0.31870428" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.45555556" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1994716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25625" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.1832627" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.18077324" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49895832" weight="0.3291536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="5" side_tool="true" visible="true" weight="0.0010416667" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947917" weight="0.31870428" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50104165" side_tool="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49895832" weight="0.3291536" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="5" side_tool="true" weight="0.0010416667" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25625" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.18077324" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49895832" weight="0.3291536" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49947917" weight="0.31870428" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="5" side_tool="true" visible="true" weight="0.0010416667" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,331 +311,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="6" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backend_bases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49456">
-          <caret line="2248" column="36" selection-start-line="2248" selection-start-column="36" selection-end-line="2248" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_qt5agg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4862">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34738">
-          <caret line="1579" column="22" selection-start-line="1579" selection-start-column="22" selection-end-line="1579" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_axes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45716">
-          <caret line="2078" selection-start-line="2078" selection-end-line="2078" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="65" selection-start-line="65" selection-end-line="82" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55396">
-          <caret line="2518" selection-start-line="2518" selection-end-line="2518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backend_bases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48774">
-          <caret line="2248" column="36" selection-start-line="2248" selection-start-column="36" selection-end-line="2248" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_qt5agg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4356">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33968">
-          <caret line="1579" column="22" selection-start-line="1579" selection-start-column="22" selection-end-line="1579" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_axes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45716">
-          <caret line="2078" selection-start-line="2078" selection-end-line="2078" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41008">
-          <caret line="1896" selection-start-line="1896" selection-end-line="1896" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1853060900/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65010">
-          <caret line="2955" column="8" selection-start-line="2955" selection-start-column="8" selection-end-line="2955" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotquery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="65" selection-start-line="65" selection-end-line="82" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55396">
-          <caret line="2518" selection-start-line="2518" selection-end-line="2518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backend_bases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49456">
-          <caret line="2248" column="36" selection-start-line="2248" selection-start-column="36" selection-end-line="2248" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_qt5agg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4356">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33968">
-          <caret line="1579" column="22" selection-start-line="1579" selection-start-column="22" selection-end-line="1579" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_axes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45716">
-          <caret line="2078" selection-start-line="2078" selection-end-line="2078" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41008">
-          <caret line="1896" selection-start-line="1896" selection-end-line="1896" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1853060900/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65010">
-          <caret line="2955" column="8" selection-start-line="2955" selection-start-column="8" selection-end-line="2955" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotquery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="62" column="44" lean-forward="true" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="82" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55396">
-          <caret line="2518" selection-start-line="2518" selection-end-line="2518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backend_bases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49456">
-          <caret line="2248" column="36" lean-forward="true" selection-start-line="2248" selection-start-column="36" selection-end-line="2248" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_qt5agg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4356">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34738">
-          <caret line="1579" column="22" selection-start-line="1579" selection-start-column="22" selection-end-line="1579" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_axes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45716">
-          <caret line="2078" selection-start-line="2078" selection-end-line="2078" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41712">
-          <caret line="1896" selection-start-line="1896" selection-end-line="1896" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1853060900/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65010">
-          <caret line="2955" column="8" selection-start-line="2955" selection-start-column="8" selection-end-line="2955" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotquery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_qt5agg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4356">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backend_bases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48774">
-          <caret line="2248" column="36" selection-start-line="2248" selection-start-column="36" selection-end-line="2248" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/pkgs/h5py-2.7.0-np112py36_0/Lib/site-packages/h5py/_hl/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7832">
-          <caret line="371" column="8" selection-start-line="371" selection-start-column="8" selection-end-line="371" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/figure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19910">
-          <caret line="940" column="8" selection-start-line="940" selection-start-column="8" selection-end-line="940" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50468">
-          <caret line="2312" selection-start-line="2312" selection-end-line="2312" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/patches.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8254">
-          <caret line="692" selection-start-line="692" selection-end-line="692" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1853060900/PyQt5/QtGui/QStaticText.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="1896" selection-start-line="1896" selection-end-line="1896" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_axes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="2078" selection-start-line="2078" selection-end-line="2078" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="421" selection-start-line="421" selection-end-line="421" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="696" selection-start-line="696" selection-end-line="696" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/markers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="268" selection-start-line="268" selection-end-line="268" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_qt5agg.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backend_bases.py" />
+    <entry file="file://C:/runenv/Anaconda3/pkgs/h5py-2.7.0-np112py36_0/Lib/site-packages/h5py/_hl/dataset.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/figure.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axis.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/patches.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1853060900/PyQt5/QtGui/QStaticText.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/__init__.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_axes.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/backends/backend_pdf.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/pyplot.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/markers.py" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -630,46 +339,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plotquery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="356" selection-start-line="356" selection-end-line="357" selection-end-column="34" />
+        <state relative-caret-position="336">
+          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="406" selection-start-line="406" selection-end-line="406" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1853060900/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="1126" column="8" selection-start-line="1126" selection-start-column="8" selection-end-line="1126" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/numpy/core/_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="2351" selection-start-line="2351" selection-end-line="2351" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/matplotlib/axes/_base.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1853060900/builtins.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/numpy/core/_methods.py" />
+    <entry file="file://C:/runenv/Anaconda3/Lib/site-packages/numpy/core/fromnumeric.py" />
     <entry file="file://$PROJECT_DIR$/plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="489" column="52" selection-start-line="489" selection-start-column="19" selection-end-line="489" selection-end-column="52" />
+        <state relative-caret-position="1822">
+          <caret line="513" column="51" selection-start-line="513" selection-start-column="51" selection-end-line="513" selection-end-column="51" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
