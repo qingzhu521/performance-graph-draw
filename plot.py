@@ -283,7 +283,7 @@ def assign_inf_long(data):
     inf = 0
     for each_data in data:
         for val in each_data:
-            if is_numlike(val):
+            if val is not None:
                 inf = max(inf, val)
     inf = inf * 1.1
     for each_data in data:
@@ -303,12 +303,14 @@ patterns = {
     'MultiwayJoin': 'p',
     'MultiwayCFL': 's',
 }
-
+some_margin = 0.90
 def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
     plt.figure(figsize=(3.2,2.3))
-    numx = len(xticks)
-    numy = len(proj) + 2
-    total_width = 0.2 * numy * numx
+    if exp.endswith('vary_workers'):
+        numy = len(proj) + 3
+    else:
+        numy = len(proj) + 2
+    total_width = 1.2 * numy
     inf = assign_inf(data) - 1
     inf_log = int(np.log10(inf))
     #set yaxes
@@ -328,8 +330,8 @@ def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
     ax = plt.gca()
     for (i, pj) in enumerate(proj):
         ax.plot(xticks, data[i], ls=':',marker=patterns[pj], mec='k', mfc='w', label=pj, color='k')
-    if exp.startswith('scalability_vary_workers'):
-        ax.plot(xticks, data[numy - 2], mec='r', mfc='w', label='Single Thread', color='r')
+    if exp.endswith('vary_workers'):
+        ax.plot(xticks, data[numy - 3], mec='r', mfc='w', label='Single Thread', color='r')
 
     #plt.xlabel(xlabel)
     #plt.ylim(0,inf)
@@ -338,7 +340,7 @@ def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
 
     if is_legend:
         # Plot the legend in a separate figure
-        legend_fig = plt.figure(figsize=(total_width*1.3 ,0.2))
+        legend_fig = plt.figure(figsize=(total_width * some_margin ,0.2))
         lax = legend_fig.add_subplot(111)
         lax.legend(*ax.get_legend_handles_labels(), ncol = numy,loc='center', frameon=True)
         lax.axis('off')
@@ -347,9 +349,8 @@ def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
 
 def plot_line_self_scala(exp, title, ylabel, xticks, xlabel, proj, data, is_legend):
     plt.figure(figsize=(3.2,2.3))
-    numx = len(xticks)
     numy = len(proj) + 2
-    total_width = 0.2 * numy * numx
+    total_width = 1.2 * numy
     for (i, pj) in enumerate(proj):
         if exp.endswith('mem') and pj != 'BigJoin':
             for j in range(len(data[i])):
@@ -384,7 +385,7 @@ def plot_line_self_scala(exp, title, ylabel, xticks, xlabel, proj, data, is_lege
 
     if is_legend:
         # Plot the legend in a separate figure
-        legend_fig = plt.figure(figsize=(total_width*1.3 ,0.2))
+        legend_fig = plt.figure(figsize=(total_width * some_margin ,0.2))
         lax = legend_fig.add_subplot(111)
         lax.legend(*ax.get_legend_handles_labels(), ncol = numy,loc='center', frameon=True)
         lax.axis('off')
@@ -415,7 +416,7 @@ if __name__ == '__main__':
         'query3': scalability_comp_time_q3,
     }
     for key in scala_each_time.keys():
-        #plot_line_long('scalability_workers_runningtime', key, scala_each_time[key])
+        plot_line_long('scalability_workers_runningtime', key, scala_each_time[key])
         plt.close()
 
     xtic_machines = [3, 6, 12, 15, 24, 30]
@@ -477,7 +478,7 @@ if __name__ == '__main__':
     }
     is_legend = True
     for key in labelled_var_labels.keys():
-        #plot_line('scalability_labelled_var_labelled', key, xtic_labels, xlabel, labelled_algs, labelled_var_labels[key], is_legend)
+        plot_line('scalability_labelled_var_labelled', key, xtic_labels, xlabel, labelled_algs, labelled_var_labels[key], is_legend)
         plt.close()
         is_legend = False
 
@@ -490,6 +491,6 @@ if __name__ == '__main__':
     }
     is_legend = True
     for key in labelled_var_density.keys():
-        #plot_line('scalability_labelled_var_density', key, xtic_density, xlabel, labelled_algs, labelled_var_density[key], is_legend)
+        plot_line('scalability_labelled_var_density', key, xtic_density, xlabel, labelled_algs, labelled_var_density[key], is_legend)
         plt.close()
         is_legend = False
