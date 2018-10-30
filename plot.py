@@ -326,7 +326,7 @@ some_margin = 0.90
 
 def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
     plt.figure(figsize=(3.2, 2.3))
-    if exp.endswith('vary_workers'):
+    if exp.endswith('scalability_vary_workers'):
         numy = len(proj) + 3
     else:
         numy = len(proj) + 2
@@ -351,7 +351,7 @@ def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
     ax = plt.gca()
     for (i, pj) in enumerate(proj):
         ax.plot(xticks, data[i], ls=':', marker=patterns[pj], mec='k', mfc='w', label=pj, color='k')
-    if exp.endswith('vary_workers'):
+    if exp.endswith('scalability_vary_workers'):
         ax.plot(xticks, data[numy - 3], mec='r', mfc='w', label='Single Thread', color='r')
 
     # plt.xlabel(xlabel)
@@ -440,7 +440,7 @@ if __name__ == '__main__':
         # plot_line_long('scalability_workers_runningtime', key, scala_each_time[key])
         plt.close()
 
-    xtic_machines = [3, 6, 12, 15, 24, 30]
+    xtic_machines = [3, 6, 12, 18, 24, 30]
     xlabel = '# Workers, machines * 3 workers/per machine'
     scalability = {
         'query1': scalability_lj_q1,
@@ -489,7 +489,7 @@ if __name__ == '__main__':
     for key in labelled_scalability.keys():
         plot_line('scalability_labelled_vary_workers', key, xtic_machines, xlabel, labelled_algs,
                   labelled_scalability[key], is_legend)
-        # plot_line_self_scala('scalability_labelled_mem', key, '$M_{max}$ (GB)', xtic_machines, xlabel, labelled_algs, labelled_scalability_mem[key], is_legend)
+        plot_line_self_scala('scalability_labelled_mem', key, '$M_{max}$ (GB)', xtic_machines, xlabel, labelled_algs, labelled_scalability_mem[key], is_legend)
         plt.close()
         is_legend = False
 

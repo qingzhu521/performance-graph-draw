@@ -77,7 +77,7 @@ vary_dataset_q4 = [
 
     [None, 4.2, None, None, None, ],
     [None, 8.02, None, None, None, ],
-    [None, 1.03, "Timeout", None, None, ],
+    [None, 1.03, "Timeout", None, "Timeout", ],
     [None, None, None, None, "Timeout", ],
     ["Timeout", 207.077, "Timeout", "Timeout", "Timeout", ],
 ]
@@ -132,8 +132,8 @@ vary_dataset_q8 = [
     [None, None, None, None, None, ],  # crys
     ["Timeout", 556.1, "Timeout", "Timeout", "Timeout", ],  # multiway
 
-    [None, 3.18, 2657, 102, "Timeout", ],  # clique
-    [None, 0.08, None, None, None, ],  # psgl
+    ["Timeout", 3.18, 2657, 102, "Timeout", ],  # clique
+    [None, 0.08, None, "Timeout", None, ],  # psgl
     [None, 0.48, "Timeout", 2451.15, None, ],  # big
     [None, None, None, None, None, ],  # crys
     ["Timeout", 273.122, "Timeout", "Timeout", "Timeout", ],  # multiway
@@ -149,7 +149,7 @@ vary_dataset_q9 = [
     [None, 1.1, None, None, None, ],  # clique
     [None, 2.09, None, None, None, ],  # psgl
     [None, 1.97, "Timeout", None, None, ],  # big
-    ["Timeout", None, None, None, "Timeout", ],  # crys
+    ["Timeout", None, None, "Timeout", "Timeout", ],  # crys
     ["Timeout", 192.21, "Timeout", "Timeout", "Timeout", ],  # multiway
 ]
 
@@ -427,14 +427,13 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
                hatch=patterns[sub_proj], align="center")
         if exp.endswith("dataset"):
             ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
-                   edgecolor='k',
-                   hatch=patterns[sub_proj], align="center")
+                   edgecolor='k', hatch=patterns[sub_proj], align="center")
         for j, eachd in enumerate(data[i]):
             if eachd != 0 and eachd < 0.1:
                 ax.text(cur_loc[j] - 0.12, eachd, str(eachd), fontsize='8', fontweight='bold', va='bottom', rotation=90)
 
     # plot group spliter
-    cur_loc = location + len(project) * width - 0.1
+    cur_loc = location + len(project) * width - 0.03
     array = [inf, ] * num_x
     ax.bar(cur_loc, array, tick_label=x_labels, width=0, edgecolor='#B5B5B5', align="edge", ls=':', lw=0.4)
     plt.xticks(location + (num_y / 2.0) * width, fontsize=14);
@@ -471,7 +470,6 @@ if __name__ == '__main__':
 
     vary_dataset_datasets = ['GP', 'US', 'LJ', 'OK', 'UK']
     is_legend = True
-    # plot_bar('vary_data_q0dataset', 'q0', vary_dataset_datasets, algs, vary_dataset_q0, True);
     for name in vary_dataset_queries.keys():
         plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
         plt.close()

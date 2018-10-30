@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed06508-6548-433f-bb19-eda2fda9914a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plotquery.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotquery.py" afterDir="false" />
     </list>
@@ -14,16 +15,28 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/patmat_plot$plot_double_decker.coverage" NAME="plot_double_decker Coverage Results" MODIFIED="1540454720932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/patmat_plot$plotquery.coverage" NAME="plotquery Coverage Results" MODIFIED="1540797394994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/patmat_plot$plot.coverage" NAME="plot Coverage Results" MODIFIED="1540799159219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/patmat_plot$plotquery.coverage" NAME="plotquery Coverage Results" MODIFIED="1540805453956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/patmat_plot$plot.coverage" NAME="plot Coverage Results" MODIFIED="1540804899142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="plot.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="489" column="52" selection-start-line="489" selection-start-column="19" selection-end-line="489" selection-end-column="52" />
+            <state relative-caret-position="469">
+              <caret line="491" column="8" selection-start-line="491" selection-start-column="8" selection-end-line="491" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plotquery.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plotquery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3440">
+              <caret line="155" column="13" selection-start-line="155" selection-end-line="155" selection-end-column="13" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -84,8 +97,8 @@
       <list>
         <option value="$PROJECT_DIR$/plot_double_decker.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/plotquery.py" />
         <option value="$PROJECT_DIR$/plot.py" />
+        <option value="$PROJECT_DIR$/plotquery.py" />
       </list>
     </option>
   </component>
@@ -99,8 +112,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="834" />
-    <option name="y" value="20" />
+    <option name="x" value="833" />
+    <option name="y" value="112" />
     <option name="width" value="1096" />
     <option name="height" value="1053" />
   </component>
@@ -149,7 +162,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.plot">
+  <component name="RunManager" selected="Python.plotquery">
     <configuration name="plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="patmat_plot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -214,8 +227,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.plot" />
         <item itemvalue="Python.plotquery" />
+        <item itemvalue="Python.plot" />
         <item itemvalue="Python.plot_double_decker" />
       </list>
     </recent_temporary>
@@ -234,11 +247,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="892" y="153" width="1096" height="1053" extended-state="0" />
+    <frame x="833" y="112" width="1096" height="1053" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50104165" side_tool="true" weight="0.3291536" />
-      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="5" side_tool="true" weight="0.0010416667" />
+      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="5" side_tool="true" visible="true" weight="0.0018518518" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49895832" weight="0.3291536" />
@@ -260,28 +273,28 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25625" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.18077324" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.18077324" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49895832" weight="0.3291536" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="5" side_tool="true" visible="true" weight="0.0010416667" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49947917" weight="0.31870428" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3260188" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49895832" weight="0.3291536" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,19 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotquery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="356" selection-start-line="356" selection-end-line="357" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,8 +668,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="489" column="52" selection-start-line="489" selection-start-column="19" selection-end-line="489" selection-end-column="52" />
+        <state relative-caret-position="469">
+          <caret line="491" column="8" selection-start-line="491" selection-start-column="8" selection-end-line="491" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plotquery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3440">
+          <caret line="155" column="13" selection-start-line="155" selection-end-line="155" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
