@@ -279,7 +279,7 @@ def assign_inf(data):
     inf = 0
     for each_data in data:
         for val in each_data:
-            if val is not None and is_numlike(val):
+            if val is not None and val != 'Timeout':
                 inf = max(inf, val)
     ten = 10
     while inf * 10 >= ten:
@@ -375,7 +375,7 @@ def plot_line_self_scala(exp, title, ylabel, xticks, xlabel, proj, data, is_lege
     for (i, pj) in enumerate(proj):
         if exp.endswith('mem') and pj != 'BigJoin':
             for j in range(len(data[i])):
-                if data[i][j] != None:
+                if data[i][j] is not None:
                     data[i][j] = (data[i][j] / 3)
 
     inf = assign_inf_long(data)

@@ -341,7 +341,7 @@ def assign_inf(data):
     inf = 0
     for each_data in data:
         for val in each_data:
-            if val is not None and is_numlike(val):
+            if val is not None and val != 'Timeout':
                 inf = max(inf, val)
     ten = 10
     while inf * 10 >= ten:
