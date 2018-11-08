@@ -4,8 +4,8 @@ from pylab import *
 
 # Exp-2 Vary Datasets
 
-algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CystalJoin', 'MultiwayJoin', ]
-label_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CystalJoin', 'MultiwayJoin', 'MultiCFL']
+algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
+label_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', 'MultiCFL']
 
 ############### unlabelled dataset ####################
 vary_dataset_q0 = [
@@ -364,7 +364,7 @@ patterns = {
     'StarJoin': '-',
     'PSgL': '//',
     'BigJoin': '..',
-    'CystalJoin': '\\\\',
+    'CrystalJoin': '\\\\',
     'MultiwayJoin': 'xxxx',
     'MultiCFL': '*'
 }
@@ -373,7 +373,7 @@ revcolor = {
     'StarJoin': 'w',
     'PSgL': 'w',
     'BigJoin': 'w',
-    'CystalJoin': 'w',
+    'CrystalJoin': 'w',
     'MultiwayJoin': 'w',
     'MultiCFL': 'w',
 }
@@ -384,14 +384,20 @@ color = {
     'StarJoin': grey0,
     'PSgL': grey0,
     'BigJoin': grey0,
-    'CystalJoin': grey0,
+    'CrystalJoin': grey0,
     'MultiwayJoin': grey0,
     'MultiCFL': grey0,
 }
+massive_algo = ['CliqueJoin', 'BigJoin', 'CrystalJoin']
+massive_q2 = [
+    #  FS   tw10
+    [719,       88, 'Timeout',1126], # Clique
+    [1039.924, 995.278, None, 9120.084], #Dataflow
+    [238.923, 995.278, 480.758, 9120.084], #Crystal
+]
 
-
-# algs = ['CliqueJoin','PSgL','BigJoin','CystalJoin', 'MultiwayJoin', ]
-# label_algs = ['CliqueJoin','StarJoin','PSgL', 'BigJoin','CystalJoin', 'MultiwayJoin', ]
+# algs = ['CliqueJoin','PSgL','BigJoin','CrystalJoin', 'MultiwayJoin', ]
+# label_algs = ['CliqueJoin','StarJoin','PSgL', 'BigJoin','CrystalJoin', 'MultiwayJoin', ]
 ### 实现名称， 数据集合名称， 第一横坐标（数据集），第二横坐标（算法），（数据集，算法）- 时间
 def plot_bar(exp, title, x_labels, project, data, is_legend=False):
     plt.figure(figsize=(5, 2.55))
@@ -424,14 +430,14 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
     for i, sub_proj in enumerate(project):
         cur_loc = location + i * width
         print("cur ", cur_loc, i, data[i])
-        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=color[sub_proj], edgecolor='k',
+        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj], edgecolor='k',
                hatch=patterns[sub_proj], align="center")
-        if exp.endswith("dataset"):
-            ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
-                   edgecolor='k', hatch=patterns[sub_proj], align="center")
-        for j, eachd in enumerate(data[i]):
-            if eachd != 0 and eachd < 0.1:
-                ax.text(cur_loc[j] - 0.12, eachd, str(eachd), fontsize='8', fontweight='bold', va='bottom', rotation=90)
+        # if exp.endswith("dataset"):
+        #     ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
+        #            edgecolor='k', hatch=patterns[sub_proj], align="center")
+        # for j, eachd in enumerate(data[i]):
+        #     if eachd != 0 and 1 < eachd < 100:
+        #         ax.text(cur_loc[j] -0.05 , eachd, str(eachd), fontsize='14',  va='bottom')
 
     # plot group spliter
     cur_loc = location + len(project) * width - 0.03
@@ -446,7 +452,7 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
 
     if is_legend:
         # Plot the legend in a separate figure
-        legend_fig = plt.figure(figsize=(total_width, 0.2))
+        legend_fig = plt.figure(figsize=(1.4*len(project), 0.2))
         lax = legend_fig.add_subplot(111)
         lax.legend(*ax.get_legend_handles_labels(), ncol=num_y, loc='center', frameon=False)
         lax.axis('off')
@@ -472,9 +478,10 @@ if __name__ == '__main__':
     vary_dataset_datasets = ['GP', 'US', 'LJ', 'OK', 'UK']
     is_legend = True
     for name in vary_dataset_queries.keys():
-        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
-        plt.close()
-        is_legend = False
+        if is_legend:
+            plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
+            plt.close()
+            is_legend = False
 
     ############### labelled #####################
     vary_labelled_queries = {
@@ -491,10 +498,10 @@ if __name__ == '__main__':
     vary_labelled_datasets = ['DG01', 'DG03', 'DG10', 'DG30', 'DG60']
     is_legend = True
     for name in vary_labelled_queries.keys():
-        plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name],
-                is_legend)
-        plt.close()
-        is_legend = False
+        if is_legend:
+            plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name],is_legend)
+            plt.close()
+            is_legend = False
 
     var_query_datasets = {
         'GP': vary_query_gp,
@@ -503,6 +510,17 @@ if __name__ == '__main__':
     xlabel = ['q0', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9']
     is_legend = True
     for name in var_query_datasets.keys():
-        #plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name], is_legend)
+        if is_legend:
+            plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name], is_legend)
+            plt.close()
+            is_legend = False
+
+    massive_data_datasets = {
+        'massive': massive_q2,
+    }
+    is_legend = True
+    xlabel = ['FS q2','FS q3', 'TW q2', 'TW q3']
+    for name in massive_data_datasets.keys():
+        plot_bar('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name], is_legend)
         plt.close()
         is_legend = False

@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pylab import *
 
-algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CystalJoin', 'MultiwayJoin', ]
-labelled_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CystalJoin', 'MultiwayJoin', 'MultiwayCFL', ]
+algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
+labelled_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', 'MultiwayCFL', ]
 
 ############### unlabelled dataset ####################
 scalability_lj_q1 = [
@@ -312,17 +312,17 @@ def assign_inf_long(data):
     return inf
 
 
-# labelled_algs = ['CliqueJoin','StarJoin','CystalJoin', 'BigJoin','MultiwayJoin', 'PSgL']
+# labelled_algs = ['CliqueJoin','StarJoin','CrystalJoin', 'BigJoin','MultiwayJoin', 'PSgL']
 patterns = {
     'CliqueJoin': 'o',
     'StarJoin': 'x',
     'PSgL': 'v',
     'BigJoin': '^',
-    'CystalJoin': '*',
-    'MultiwayJoin': 'p',
+    'CrystalJoin': '*',
+    'MultiwayJoin': '+',
     'MultiwayCFL': 's',
 }
-some_margin = 0.90
+some_margin = 0.85
 
 
 def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
@@ -356,7 +356,7 @@ def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
         ax.plot(xticks, data[numy - 3], mec='r', mfc='w', label='Single Thread', color='r')
 
     # plt.xlabel(xlabel)
-    # plt.ylim(0,inf)
+    # plt.ylim(-10,inf)
     plt.xticks(xticks, fontsize='8')
     plt.savefig('figures/' + exp + '_' + title + '.pdf', format='pdf')
 
@@ -373,6 +373,18 @@ def plot_line_self_scala(exp, title, ylabel, xticks, xlabel, proj, data, is_lege
     plt.figure(figsize=(3.2, 2.3))
     numy = len(proj) + 2
     total_width = 1.2 * numy
+
+    if ylabel.endswith('(billions)'):
+        for (i, pj) in enumerate(proj):
+            for j in range(len(data[i])):
+                if data[i][j] is not None:
+                    data[i][j] = (data[i][j] / 1000000000)
+    elif ylabel.endswith('(millions)'):
+        for (i, pj) in enumerate(proj):
+            for j in range(len(data[i])):
+                if data[i][j] is not None:
+                    data[i][j] = (data[i][j] / 1000000)
+
     for (i, pj) in enumerate(proj):
         if exp.endswith('mem') and pj != 'BigJoin':
             for j in range(len(data[i])):
@@ -384,22 +396,10 @@ def plot_line_self_scala(exp, title, ylabel, xticks, xlabel, proj, data, is_lege
     # set yaxes
     plt.title(ylabel, loc="left")
 
-    if not exp.endswith('mem'):
-        plt.ylim((-1, inf + 0.2))
-        yloc = list(np.arange(0, inf, step=inf / 3))
-        ytics = list(np.arange(0, inf, step=inf / 3))
-        print(ytics)
-        if ylabel.endswith('(billions)'):
-            ytics = [str(int(x / 1000000000)) for x in ytics]
-        elif ylabel.endswith('(millions)'):
-            ytics = [str(int(x / 1000000)) for x in ytics]
-
-
     ax = plt.gca()
     for (i, pj) in enumerate(proj):
         ax.plot(xticks, data[i], ls = ":", marker=patterns[pj], mec='k', mfc='w', label=pj, color='k')
-    if not exp.endswith('mem'):
-        plt.yticks(yloc, ytics)
+
     plt.xticks(xticks, fontsize='8')
     plt.savefig('figures/' + exp + '_' + title + '.pdf', format='pdf')
 
