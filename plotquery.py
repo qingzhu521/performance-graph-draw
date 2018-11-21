@@ -555,7 +555,7 @@ if __name__ == '__main__':
     xlabel = ['FS q2','FS q3', 'TW q2', 'TW q3']
     for name in massive_data_datasets.keys():
         if is_legend:
-            plog_legend('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name])
-        plot_bar('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name])
+            plog_legend('massive_data', name, xlabel, massive_algo, massive_data_datasets[name])
+        plot_bar('massive_data', name, xlabel, massive_algo, massive_data_datasets[name])
         plt.close()
         is_legend = False
