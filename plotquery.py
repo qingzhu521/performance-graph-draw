@@ -194,16 +194,16 @@ labelled_dataset_q0 = [
     [4.19, 13.22, 43.26, 141.87, 258.11, ],  # multicfl
 ]
 labelled_dataset_q1 = [
-    [12.84, 127.77, 2013.06, "Timeout", "Timeout", ],  # clique
-    [12.84, 127.77, 2013.06, "Timeout", "Timeout", ],  # star
+    [1.88, 2.62, 6, 15.83, 96.08, ],  # clique
+    [1.88, 2.62, 6, 15.83, 96.08, ],  # star
     [27.82, 44.85, 112.26, 304.95, None, ],  # psgl
     [3.09, 6.42, 18.65, 57.73, 121.11, ],  # big
     [1.196, 1.311, 1.638, 2.626, 32.324, ],  # crystal
     [3.19, 100.72, 922.56, 1077.7, "Timeout", ],  # multiay
     [0.66, 2.34, 8.09, 26.35, 46.37, ],  # multiwaycfl
 
-    [12.53, 126.58, 2008.97, "Timeout", "Timeout", ],
-    [12.53, 126.58, 2008.97, "Timeout", "Timeout", ],
+    [1.36, 2.11, 4.79, 12.36, 24.14, ],
+    [1.36, 2.11, 4.79, 12.36, 24.14, ],
     [0.68, 1.99, 6.87, 22.47, None, ],
     [1.98, 5.21, 17.07, 54.99, 110.23, ],
     [0.123, 0.142, 0.192, 0.414, 0.992, ], # crystal
@@ -229,16 +229,16 @@ labelled_dataset_q2 = [
     [2.74, 10.45, 48.8, 171.13, 477.11, ],   # multiwycfl
 ]
 labelled_dataset_q3 = [
-    [12.24, 54.63, 169.14, None, None, ],  # clique
-    [12.24, 54.63, 169.14, None, None, ],  # star
+    [12.24, 54.63, 169.14, 1972.66, 6281.8, ],  # clique
+    [12.24, 54.63, 169.14, 1972.66, 6281.8, ],  # star
     [47.2, 104.55, None, None, None, ],  # psgl
     [43.582, 207.028, 1354.557, 7237.453, "Timeout", ],  # big
     [43.582, 207.028, 1354.557, 7237.453, "Timeout", ],  # crs
     [105.17, 447.19, "Timeout", "Timeout", "Timeout", ],  # multiway
     [38.88, 278.46, 1647.96, "Timeout", "Timeout", ],  # multicfl
 
-    [6.44, 27.85, 132.57, None, None, ],  # clique
-    [6.44, 27.85, 132.57, None, None, ],  # star
+    [6.44, 27.85, 132.57, 1300, 3673.2, ],  # clique
+    [6.44, 27.85, 132.57, 1300, 3673.2, ],  # star
     [12, 52.37, None, None, None, ],  # psgl
     [38.117, 188.771, 1272.509, 6933.427, "Timeout", ],  # big
     [38.117, 188.771, 1272.509, 6933.427, "Timeout", ],  # crs
@@ -282,7 +282,7 @@ labelled_dataset_q5 = [
     [0.93, 4.28, 34.86, 167.38, 586.72],  # multiwaycfl
 ]
 labelled_dataset_q6 = [
-    [1.16, 3.85, 15.08, 54.69, 177.69, ],  # clique
+    [1.16, 3.85, 15.08, 54.69, 114, ],  # clique
     [982, 3544.03, "Timeout", "Timeout", "Timeout", ],  # star
     [22.28, 27.91, 51.46, 122.62, None, ],  # psgl
     [1.08, 1.16, 1.49, 2.88, 7.04, ],  # big
@@ -290,7 +290,7 @@ labelled_dataset_q6 = [
     [52.49, 112.07, 306.42, 250.44, 807.09, ],  # multiway
     [0.65, 1.89, 7.07, 24.02, 57.76],  # multiwaycfl
 
-    [1.13, 3.81, 15.03, 54.6, 177.5, ],
+    [1.13, 3.81, 15.03, 54.6, 110, ],
     [980.4, 3535.56, "Timeout", "Timeout", "Timeout", ],
     [0.07, 0.04, 0.04, 2.07, None, ], #psgl
     [0.01, 0.03, 0.17, 0.98, 4.24, ], # big
@@ -300,7 +300,7 @@ labelled_dataset_q6 = [
 ]
 
 labelled_dataset_q7 = [
-    [1.24, 3.86, 14.63, 66.97, 240.47, ],  # cli
+    [1.24, 3.86, 14.63, 66.97, 206.58, ],  # cli
     [3.64, 36.47, 732.75, None, None, ],  # star
     [20.33, 47.03, 235.92, 2331.5, None, ],  # psgl
     [1.55, 7.06, 82.53, 980.91, 6607.21, ],  # big
@@ -308,7 +308,7 @@ labelled_dataset_q7 = [
     [134.56, 356.33, 1264.34, "Timeout", "Timeout", ],  # multi
     [1.34, 9.98, 175.72, 2256.48, "Timeout", ],  # multiwaycfl
 
-    [1.16, 3.72, 14.22, 65.71, 238.3, ], #cli
+    [1.16, 3.72, 14.22, 65.71, 138.3, ], #cli
     [2.69, 18.86, 297.14, None, None, ], #star
     [0.1, 2.65, 54.44, 850.16, None, ], #pslg
     [0.46, 5.77, 79.31, 960.84, 6520.95, ],
@@ -317,7 +317,7 @@ labelled_dataset_q7 = [
     [1.34, 9.98, 175.72, 2256.48, "Timeout", ],  # multiwaycfl
 ]
 labelled_dataset_q8 = [
-    [1.35, 4.29, 16.27, 55.63, 134.9, ],  # clique
+    [1.35, 4.29, 16.27, 55.63, 94.13, ],  # clique
     [1000.7, 3642.74, "Timeout", "Timeout", "Timeout", ],  # star
     [27.4, 58.95, 219.45, 932.3, None, ],  # psgl
     [681.84, 7265.93, "Timeout", "Timeout", "Timeout", ],  # big
@@ -325,7 +325,7 @@ labelled_dataset_q8 = [
     [53.26, 138.1, 826.88, 6702, "Timeout", ],  # multi
     [8.2, 67.13, 665.73, 5651.29, "Timeout", ],  # multwaycfl
 
-    [1.13, 3.55, 12.61, 39.94, 100.1, ],  # clique
+    [1.13, 3.55, 12.61, 39.94, 82, ],  # clique
     [984.28, 3558.21, "Timeout", "Timeout", "Timeout", ],  # star
     [5.01, 23.91, 128.6, 658.42, None, ],  # psgl
     [680.12, 7262.55, "Timeout", "Timeout", "Timeout", ],  # big
@@ -432,9 +432,9 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
         print("cur ", cur_loc, i, data[i])
         ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj], edgecolor='k',
                hatch=patterns[sub_proj], align="center")
-        # if exp.endswith("dataset"):
-        #     ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
-        #            edgecolor='k', hatch=patterns[sub_proj], align="center")
+        if exp.endswith("dataset"):
+            ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
+                   edgecolor='k', hatch=patterns[sub_proj], align="center")
         # for j, eachd in enumerate(data[i]):
         #     if eachd != 0 and 1 < eachd < 100:
         #         ax.text(cur_loc[j] -0.05 , eachd, str(eachd), fontsize='14',  va='bottom')
@@ -478,10 +478,9 @@ if __name__ == '__main__':
     vary_dataset_datasets = ['GP', 'US', 'LJ', 'OK', 'UK']
     is_legend = True
     for name in vary_dataset_queries.keys():
-        if is_legend:
-            plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
-            plt.close()
-            is_legend = False
+        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
+        plt.close()
+        is_legend = False
 
     ############### labelled #####################
     vary_labelled_queries = {
@@ -498,10 +497,9 @@ if __name__ == '__main__':
     vary_labelled_datasets = ['DG01', 'DG03', 'DG10', 'DG30', 'DG60']
     is_legend = True
     for name in vary_labelled_queries.keys():
-        if is_legend:
-            plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name],is_legend)
-            plt.close()
-            is_legend = False
+        plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name],is_legend)
+        plt.close()
+        is_legend = False
 
     var_query_datasets = {
         'GP': vary_query_gp,
@@ -521,6 +519,6 @@ if __name__ == '__main__':
     is_legend = True
     xlabel = ['FS q2','FS q3', 'TW q2', 'TW q3']
     for name in massive_data_datasets.keys():
-        plot_bar('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name], is_legend)
+        #plot_bar('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name], is_legend)
         plt.close()
         is_legend = False
