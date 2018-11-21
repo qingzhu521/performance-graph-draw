@@ -365,8 +365,7 @@ patterns = {
     'PSgL': '//',
     'BigJoin': '..',
     'CrystalJoin': '\\\\',
-    'MultiwayJoin': 'xxxx',
-    'MultiCFL': '*'
+    'MultiwayJoin': '|+|',
 }
 revcolor = {
     'CliqueJoin': 'w',
@@ -406,7 +405,7 @@ def plot_bar(exp, title, x_labels, project, data):
     num_y = int(len(data)/2)
 
     width = 0.2
-    step = width * (num_y + 2)
+    step = width * (len(project) + 2)
     location = np.arange(start=0, stop=num_x * step, step=step)
     total_width = step * num_x
 
@@ -431,7 +430,7 @@ def plot_bar(exp, title, x_labels, project, data):
     for i, sub_proj in enumerate(project):
         cur_loc = location + i * width
         print("cur ", cur_loc, i, data[i])
-        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=color[sub_proj], edgecolor='k',
+        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj], edgecolor='k',
                hatch=patterns[sub_proj], align="center")
         if exp.endswith("dataset"):
             ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
@@ -457,7 +456,7 @@ def plot_bar(exp, title, x_labels, project, data):
 def plog_legend(exp, title, x_labels, project, data):
     plt.figure(figsize=(5, 2.55))
     num_x = len(x_labels)
-    num_y = int(len(data)/2)
+    num_y = len(project)
 
     width = 0.2
     step = width * (num_y + 2)
@@ -510,7 +509,7 @@ if __name__ == '__main__':
     for name in vary_dataset_queries.keys():
         if is_legend:
             plog_legend('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
-        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
+        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
         plt.close()
         is_legend = False
 
@@ -531,7 +530,7 @@ if __name__ == '__main__':
     for name in vary_labelled_queries.keys():
         if is_legend:
             plog_legend('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
-        plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
+        #plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
         plt.close()
         is_legend = False
 
@@ -556,6 +555,6 @@ if __name__ == '__main__':
     for name in massive_data_datasets.keys():
         if is_legend:
             plog_legend('massive_data', name, xlabel, massive_algo, massive_data_datasets[name])
-        plot_bar('massive_data', name, xlabel, massive_algo, massive_data_datasets[name])
+        #plot_bar('massive_data', name, xlabel, massive_algo, massive_data_datasets[name])
         plt.close()
         is_legend = False

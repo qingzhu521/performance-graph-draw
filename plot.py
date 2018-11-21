@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from pylab import *
 
 algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
+nopsgl = ['CliqueJoin', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
 labelled_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin']
 
 ############### unlabelled dataset ####################
@@ -350,9 +351,9 @@ def plot_line(exp, title, xticks, xlabel, proj, data, is_legend):
 
     ax = plt.gca()
     for (i, pj) in enumerate(proj):
-        ax.plot(xticks, data[i], ls=':', marker=patterns[pj], mec='k', mfc='w', label=pj, color='k')
+        ax.plot(xticks, data[i], ls=':', marker=patterns[pj], mec='k', mfc='none', label=pj, color='k')
     if exp.endswith('scalability_vary_workers'):
-        ax.plot(xticks, data[numy - 3], mec='r', mfc='w', label='Single Thread', color='r')
+        ax.plot(xticks, data[numy - 3], mec='r', mfc='none', label='Single Thread', color='r')
 
     # plt.xlabel(xlabel)
     # plt.ylim(-10,inf)
@@ -397,7 +398,7 @@ def plot_line_self_scala(exp, title, ylabel, xticks, xlabel, proj, data, is_lege
 
     ax = plt.gca()
     for (i, pj) in enumerate(proj):
-        ax.plot(xticks, data[i], ls = ":", marker=patterns[pj], mec='k', mfc='w', label=pj, color='k')
+        ax.plot(xticks, data[i], ls = ":", marker=patterns[pj], mec='k', mfc='none', label=pj, color='k')
 
     plt.xticks(xticks, fontsize='8')
     plt.savefig('figures/' + exp + '_' + title + '.pdf', format='pdf')
@@ -420,7 +421,7 @@ def plot_line_long(exp, title, data):
     plt.yticks(yloc, yticks)
     plt.title("T (sec)", loc="left")
     for (i, alg) in enumerate(algs):
-        plt.plot(x, data[i], ls=':', marker=patterns[alg], mec='k', mfc='w', label=alg, color='k')
+        plt.plot(x, data[i], ls=':', marker=patterns[alg], mec='k', mfc='none', label=alg, color='k')
     plt.xticks(x)
     plt.savefig('figures/' + exp + '_' + title + '.pdf', format='pdf')
 
@@ -456,7 +457,7 @@ if __name__ == '__main__':
     }
     is_legend = True
     for key in scalability.keys():
-        plot_line('scalability_vary_workers', key, xtic_machines, xlabel, algs, scalability[key], is_legend)
+        plot_line('scalability_vary_workers', key, xtic_machines, xlabel, nopsgl, scalability[key], is_legend)
         plot_line_self_scala('scalability_lj_communication', key, '$C_{max}$ (billions)', xtic_machines, xlabel, algs,
                             scalability_commnunication[key], is_legend)
         plot_line_self_scala('scalability_lj_mem', key, '$M_{max}$ (GB)', xtic_machines, xlabel, algs,
