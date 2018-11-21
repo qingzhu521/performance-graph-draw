@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from pylab import *
 
 algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
-labelled_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', 'MultiwayCFL', ]
+labelled_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin']
 
 ############### unlabelled dataset ####################
 scalability_lj_q1 = [
@@ -318,9 +318,8 @@ patterns = {
     'StarJoin': 'x',
     'PSgL': 'v',
     'BigJoin': '^',
-    'CrystalJoin': '*',
+    'CrystalJoin': 's',
     'MultiwayJoin': '+',
-    'MultiwayCFL': 's',
 }
 some_margin = 0.85
 

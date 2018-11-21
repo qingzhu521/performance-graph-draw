@@ -5,7 +5,7 @@ from pylab import *
 # Exp-2 Vary Datasets
 
 algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
-label_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', 'MultiCFL']
+label_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin']
 
 ############### unlabelled dataset ####################
 vary_dataset_q0 = [
@@ -354,7 +354,7 @@ def assign_inf(data):
             if each_data[i] == "Timeout":
                 each_data[i] = xinf
             elif each_data[i] is None:
-                each_data[i] = 0.1
+                each_data[i] = 0.0000001
 
     return inf
 
@@ -398,16 +398,16 @@ massive_q2 = [
 
 # algs = ['CliqueJoin','PSgL','BigJoin','CrystalJoin', 'MultiwayJoin', ]
 # label_algs = ['CliqueJoin','StarJoin','PSgL', 'BigJoin','CrystalJoin', 'MultiwayJoin', ]
+
 ### 实现名称， 数据集合名称， 第一横坐标（数据集），第二横坐标（算法），（数据集，算法）- 时间
-def plot_bar(exp, title, x_labels, project, data, is_legend=False):
+def plot_bar(exp, title, x_labels, project, data):
     plt.figure(figsize=(5, 2.55))
     num_x = len(x_labels)
-    num_y = len(project)
+    num_y = int(len(data)/2)
 
     width = 0.2
     step = width * (num_y + 2)
     location = np.arange(start=0, stop=num_x * step, step=step)
-    print("local", location)
     total_width = step * num_x
 
     ax = plt.gca()
@@ -423,14 +423,15 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
 
     ylocs.append(int(np.power(10, inf_log + 0.5)))
     yticks.append(">3h")
-    plt.yscale('log')
     plt.yticks(ylocs, yticks, fontsize=14)
+    plt.yscale('log')
+    plt.ylim((0.12, int(np.power(10, inf_log + 0.5))))
 
     # plot group
     for i, sub_proj in enumerate(project):
         cur_loc = location + i * width
         print("cur ", cur_loc, i, data[i])
-        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj], edgecolor='k',
+        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=color[sub_proj], edgecolor='k',
                hatch=patterns[sub_proj], align="center")
         if exp.endswith("dataset"):
             ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
@@ -440,28 +441,57 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
         #         ax.text(cur_loc[j] -0.05 , eachd, str(eachd), fontsize='14',  va='bottom')
 
     # plot group spliter
+
+
     cur_loc = location + len(project) * width - 0.03
     array = [inf, ] * num_x
     ax.bar(cur_loc, array, tick_label=x_labels, width=0, edgecolor='#222222', align="edge", ls=':', lw=0.4)
-    plt.xticks(location + (num_y / 2.0) * width, fontsize=14);
 
-    plt.ylim(0, int(np.power(10, inf_log + 0.5)))
+    plt.xticks(location + (num_y / 2.0) * width, fontsize=14);
     plt.title("T (sec)", loc="left")
     # plt.show()
     plt.savefig('figures/' + exp + '_' + title + '.pdf', fotmat='pdf')
 
-    if is_legend:
+
+
+def plog_legend(exp, title, x_labels, project, data):
+    plt.figure(figsize=(5, 2.55))
+    num_x = len(x_labels)
+    num_y = int(len(data)/2)
+
+    width = 0.2
+    step = width * (num_y + 2)
+    location = np.arange(start=0, stop=num_x * step, step=step)
+
+    ax = plt.gca()
+    inf = assign_inf(data)
+    inf_log = int(np.log10(inf)) - 1
+    ylocs = []
+    yticks = []
+    for i in range(inf_log + 1):
+        ylocs.append(int(np.power(10, i)))
+        yticks.append("$10^" + str(i) + "$")
+
+    ylocs.append(int(np.power(10, inf_log + 0.5)))
+    yticks.append(">3h")
+    plt.yticks(ylocs, yticks, fontsize=14)
+
+    for i, sub_proj in enumerate(project):
+        cur_loc = location + i * width
+        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj], edgecolor='k',
+               hatch=patterns[sub_proj], align="center")
+
         # Plot the legend in a separate figure
-        legend_fig = plt.figure(figsize=(1.4*len(project), 0.2))
-        lax = legend_fig.add_subplot(111)
-        lax.legend(*ax.get_legend_handles_labels(), ncol=num_y, loc='center', frameon=False)
-        lax.axis('off')
-        lax.set_frame_on(False)
-        plt.savefig('figures/' + exp + '_legend.pdf', fotmat='pdf')
+    legend_fig = plt.figure(figsize=(1.4*len(project), 0.2))
+    lax = legend_fig.add_subplot(111)
+    lax.legend(*ax.get_legend_handles_labels(), ncol=num_y, loc='center', frameon=False)
+    lax.axis('off')
+    lax.set_frame_on(False)
+    plt.savefig('figures/' + exp + '_legend.pdf', fotmat='pdf')
 
 
 if __name__ == '__main__':
-    ############### unlabelled #####################
+    ############## unlabelled #####################
     vary_dataset_queries = {
         'q0': vary_dataset_q0,
         'q1': vary_dataset_q1,
@@ -478,7 +508,9 @@ if __name__ == '__main__':
     vary_dataset_datasets = ['GP', 'US', 'LJ', 'OK', 'UK']
     is_legend = True
     for name in vary_dataset_queries.keys():
-        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
+        if is_legend:
+            plog_legend('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
+        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
         plt.close()
         is_legend = False
 
@@ -497,7 +529,9 @@ if __name__ == '__main__':
     vary_labelled_datasets = ['DG01', 'DG03', 'DG10', 'DG30', 'DG60']
     is_legend = True
     for name in vary_labelled_queries.keys():
-        plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name],is_legend)
+        if is_legend:
+            plog_legend('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
+        plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
         plt.close()
         is_legend = False
 
@@ -509,9 +543,10 @@ if __name__ == '__main__':
     is_legend = True
     for name in var_query_datasets.keys():
         if is_legend:
-            plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name], is_legend)
-            plt.close()
-            is_legend = False
+            plog_legend('vary_queries', name, xlabel, algs, var_query_datasets[name])
+        plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name])
+        plt.close()
+        is_legend = False
 
     massive_data_datasets = {
         'massive': massive_q2,
@@ -519,6 +554,8 @@ if __name__ == '__main__':
     is_legend = True
     xlabel = ['FS q2','FS q3', 'TW q2', 'TW q3']
     for name in massive_data_datasets.keys():
-        #plot_bar('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name], is_legend)
+        if is_legend:
+            plog_legend('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name])
+        plot_bar('massive_dataset', name, xlabel, massive_algo, massive_data_datasets[name])
         plt.close()
         is_legend = False
