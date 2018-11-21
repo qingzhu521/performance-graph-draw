@@ -354,7 +354,7 @@ def assign_inf(data):
             if each_data[i] == "Timeout":
                 each_data[i] = xinf
             elif each_data[i] is None:
-                each_data[i] = 0.1
+                each_data[i] = 0.0000001
 
     return inf
 
@@ -423,9 +423,9 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
 
     ylocs.append(int(np.power(10, inf_log + 0.5)))
     yticks.append(">3h")
-    plt.yscale('log')
     plt.yticks(ylocs, yticks, fontsize=14)
-    plt.ylim((0.0, int(np.power(10, inf_log + 0.5))))
+    plt.yscale('log')
+    plt.ylim((0.12, int(np.power(10, inf_log + 0.5))))
 
     # plot group
     for i, sub_proj in enumerate(project):
@@ -441,6 +441,8 @@ def plot_bar(exp, title, x_labels, project, data, is_legend=False):
         #         ax.text(cur_loc[j] -0.05 , eachd, str(eachd), fontsize='14',  va='bottom')
 
     # plot group spliter
+
+
     cur_loc = location + len(project) * width - 0.03
     array = [inf, ] * num_x
     ax.bar(cur_loc, array, tick_label=x_labels, width=0, edgecolor='#222222', align="edge", ls=':', lw=0.4)
@@ -478,8 +480,8 @@ if __name__ == '__main__':
     vary_dataset_datasets = ['GP', 'US', 'LJ', 'OK', 'UK']
     is_legend = True
     for name in vary_dataset_queries.keys():
-        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
-        plt.close()
+        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name], is_legend)
+        #plt.close()
         is_legend = False
 
     ############### labelled #####################
