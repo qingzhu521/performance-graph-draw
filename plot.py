@@ -456,14 +456,21 @@ if __name__ == '__main__':
         'query3': scalability_lj_q3_mem,
     }
     is_legend = True
+    key = 'query1'
+    plot_line('scalability_vary_workers', key, xtic_machines, xlabel, nopsgl, scalability[key], is_legend)
+    plot_line_self_scala('scalability_lj_communication', key, '$C_{max}$ (billions)', xtic_machines, xlabel, nopsgl,
+                         scalability_commnunication[key], is_legend)
+    plot_line_self_scala('scalability_lj_mem', key, '$M_{max}$ (GB)', xtic_machines, xlabel, nopsgl,
+                         scalability_mem[key], is_legend)
+    is_legend = False
+    plt.close()
     for key in scalability.keys():
-        plot_line('scalability_vary_workers', key, xtic_machines, xlabel, nopsgl, scalability[key], is_legend)
+        plot_line('scalability_vary_workers', key, xtic_machines, xlabel, algs, scalability[key], is_legend)
         plot_line_self_scala('scalability_lj_communication', key, '$C_{max}$ (billions)', xtic_machines, xlabel, algs,
                             scalability_commnunication[key], is_legend)
         plot_line_self_scala('scalability_lj_mem', key, '$M_{max}$ (GB)', xtic_machines, xlabel, algs,
                             scalability_mem[key], is_legend)
         plt.close()
-        is_legend = False
 
     ############ labelled  var worker time communication and memory#############
     labelled_scalability = {
@@ -486,6 +493,7 @@ if __name__ == '__main__':
     for key in labelled_scalability.keys():
         plot_line('scalability_labelled_vary_workers', key, xtic_machines, xlabel, labelled_algs,
                  labelled_scalability[key], is_legend)
+        plt.close()
         plot_line_self_scala('scalability_labelled_mem', key, '$M_{max}$ (GB)', xtic_machines, xlabel, labelled_algs, labelled_scalability_mem[key], is_legend)
         plt.close()
         is_legend = False

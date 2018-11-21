@@ -5,6 +5,7 @@ from pylab import *
 # Exp-2 Vary Datasets
 
 algs = ['CliqueJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
+anolgs = ['CliqueJoin', 'BigJoin', 'CrystalJoin', 'MultiwayJoin', ]
 label_algs = ['CliqueJoin', 'StarJoin', 'PSgL', 'BigJoin', 'CrystalJoin', 'MultiwayJoin']
 
 ############### unlabelled dataset ####################
@@ -365,7 +366,7 @@ patterns = {
     'PSgL': '//',
     'BigJoin': '..',
     'CrystalJoin': '\\\\',
-    'MultiwayJoin': '|+|',
+    'MultiwayJoin': 'xx',
 }
 revcolor = {
     'CliqueJoin': 'w',
@@ -430,7 +431,7 @@ def plot_bar(exp, title, x_labels, project, data):
     for i, sub_proj in enumerate(project):
         cur_loc = location + i * width
         print("cur ", cur_loc, i, data[i])
-        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj], edgecolor='k',
+        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=color[sub_proj], edgecolor='k',
                hatch=patterns[sub_proj], align="center")
         if exp.endswith("dataset"):
             ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
@@ -509,7 +510,7 @@ if __name__ == '__main__':
     for name in vary_dataset_queries.keys():
         if is_legend:
             plog_legend('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
-        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
+        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
         plt.close()
         is_legend = False
 
@@ -530,7 +531,7 @@ if __name__ == '__main__':
     for name in vary_labelled_queries.keys():
         if is_legend:
             plog_legend('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
-        #plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
+        plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
         plt.close()
         is_legend = False
 
