@@ -301,20 +301,20 @@ labelled_dataset_q6 = [
 ]
 
 labelled_dataset_q7 = [
-    [1.24, 3.86, 14.63, 66.97, 206.58, ],  # cli
-    [3.64, 36.47, 732.75, None, None, ],  # star
-    [20.33, 47.03, 235.92, 2331.5, None, ],  # psgl
-    [1.55, 7.06, 82.53, 980.91, 6607.21, ],  # big
-    [5.177, 32.288, 302.624, 2547.834, 6607.21, ],  # crs
-    [134.56, 356.33, 1264.34, "Timeout", "Timeout", ],  # multi
-    [1.34, 9.98, 175.72, 2256.48, "Timeout", ],  # multiwaycfl
+    [1.24,  3.86,   14.63,  60.37,  206.58, ],  # cli
+    [3.64,  36.47,  732.75, None,     None, ],  # star
+    [20.33, 47.03,  235.92, 2331.5,   None, ],  # psgl
+    [1.55,  7.06,   82.53,  980.91,   6607.21, ],  # big
+    [5.177, 32.288, 302.624,2547.834, None, ],  # crs
+    [134.56,356.33, 1264.34,"Timeout", "Timeout", ],  # multi
+    [1.34,   9.98,   175.72, 2256.48, "Timeout", ],  # multiwaycfl
 
-    [1.16, 3.72, 14.22, 65.71, 138.3, ], #cli
-    [2.69, 18.86, 297.14, None, None, ], #star
-    [0.1, 2.65, 54.44, 850.16, None, ], #pslg
-    [0.46, 5.77, 79.31, 960.84, 6520.95, ],
-    [3.754, 29.533, 289.123, 2461.031, 6520.95, ],
-    [16.44, 8.82, 167.536, "Timeout", "Timeout", ],
+    [1.16,  3.72,   14.22,  49,    138.3, ], #cli
+    [2.69,  18.86,  297.14, None,    None, ], #star
+    [0.1,   2.65,   54.44,  850.16,   None, ], #pslg
+    [0.46,  5.77,   79.31,  960.84,   6520.95, ], #big
+    [3.754, 29.53,  289.12, 2461.031, None, ], #crys
+    [16.44, 8.82, 167.536,  "Timeout", "Timeout", ],
     [1.34, 9.98, 175.72, 2256.48, "Timeout", ],  # multiwaycfl
 ]
 labelled_dataset_q8 = [
@@ -355,7 +355,7 @@ def assign_inf(data):
             if each_data[i] == "Timeout":
                 each_data[i] = xinf
             elif each_data[i] is None:
-                each_data[i] = 0.0000001
+                each_data[i] = 0.1
 
     return inf
 
@@ -417,15 +417,15 @@ def plot_bar(exp, title, x_labels, project, data):
     inf_log = int(np.log10(inf)) - 1
     ylocs = []
     yticks = []
-    for i in range(inf_log + 1):
+    for i in range(inf_log):
         ylocs.append(int(np.power(10, i)))
         yticks.append("$10^" + str(i) + "$")
 
-    ylocs.append(int(np.power(10, inf_log + 0.5)))
+    ylocs.append(int(np.power(10, inf_log + 0.1)))
     yticks.append(">3h")
     plt.yticks(ylocs, yticks, fontsize=14)
+    plt.ylim((0.15, int(np.power(10, inf_log + 0.5))))
     plt.yscale('log')
-    plt.ylim((0.12, int(np.power(10, inf_log + 0.5))))
 
     # plot group
     for i, sub_proj in enumerate(project):
@@ -441,8 +441,6 @@ def plot_bar(exp, title, x_labels, project, data):
         #         ax.text(cur_loc[j] -0.05 , eachd, str(eachd), fontsize='14',  va='bottom')
 
     # plot group spliter
-
-
     cur_loc = location + len(project) * width - 0.03
     array = [inf, ] * num_x
     ax.bar(cur_loc, array, tick_label=x_labels, width=0, edgecolor='#222222', align="edge", ls=':', lw=0.4)
@@ -472,7 +470,7 @@ def plog_legend(exp, title, x_labels, project, data):
         ylocs.append(int(np.power(10, i)))
         yticks.append("$10^" + str(i) + "$")
 
-    ylocs.append(int(np.power(10, inf_log + 0.5)))
+    ylocs.append(int(np.power(10, inf_log)))
     yticks.append(">3h")
     plt.yticks(ylocs, yticks, fontsize=14)
 
@@ -510,7 +508,7 @@ if __name__ == '__main__':
     for name in vary_dataset_queries.keys():
         if is_legend:
             plog_legend('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
-        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
+        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
         plt.close()
         is_legend = False
 
@@ -534,6 +532,7 @@ if __name__ == '__main__':
         plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
         plt.close()
         is_legend = False
+        break
 
     var_query_datasets = {
         'GP': vary_query_gp,
@@ -544,7 +543,7 @@ if __name__ == '__main__':
     for name in var_query_datasets.keys():
         if is_legend:
             plog_legend('vary_queries', name, xlabel, algs, var_query_datasets[name])
-        plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name])
+        #plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name])
         plt.close()
         is_legend = False
 
