@@ -162,10 +162,9 @@ vary_query_gp = [
     # psgl
     [4.07, None, 1678.04, 301.83, None, None, None, None, None, None, ],  # bigjoin
     [4.07, None, 27.82, 301.83, None, None, None, None, None, None, ],  # crys
-    [155.06, 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', ],
-    # multiway
-
+    [155.06, 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', ],# multiway
 ]
+
 vary_query_us = [
     # q0    1       2           3       4       5       6       7       8   9
     [1.046, 12.14, 7.5, 1.6, 22, 5.7, 2.3, 12.2, 3.2, 413, ],  # clique
@@ -213,22 +212,23 @@ labelled_dataset_q1 = [
 ]
 
 labelled_dataset_q2 = [
-    [0.46, 1.48, 5.62, 19.14, 53.44, ],  # clique
-    [5.23, 21.61, 83.79, 263.48, None, ],  # star
+    [0.54, 2.14, 5.62, 19.14, 53.44, ],  # clique
+    [5.23, 13.6, 83.79, 263.48, None, ],  # star
     [21.91, 32.14, 56.86, 145.97, None, ],  # psgl
-    [1.73, 4.2, 17.61, 75.02, 255.78, ],  # big
+    [1.547, 3.656, 14.737, 64.788, 241.569, ],  # big
     [1.547, 3.656, 14.737, 64.788, 241.569, ],  # crs
     [33.27, 52.99, 109.45, 306.86, 720.05, ],  # multiway
     [2.74, 10.45, 48.12, 171.13, 477.11, ],  # multiwycfl
 
-    [0.44, 1.48, 5.62, 19.14, 53.43, ],  # clique
-    [3.3, 12.11, 60.51, 222.56, None, ],  # star
+    [0.45, 1.48, 5.62, 19.14, 53.43, ],  # clique
+    [3.3, 11.14, 60.51, 222.56, None, ],  # star
     [0.09, 1.19, 5.96, 23.47, None, ],  # pslg
-    [0.67, 2.99, 16.13, 72.39, 247.61, ],  # big
+    [0.449, 2.462, 13.131, 61.442, 235.121, ],  # big
     [0.449, 2.462, 13.131, 61.442, 235.121, ], # crs
-    [1.36, 5.1, 67.59, 65.27, 381.64, ], # multiway
+    [1.36,  5.1, 67.59, 65.27, 381.64, ], # multiway
     [2.74, 10.45, 48.8, 171.13, 477.11, ],   # multiwycfl
 ]
+
 labelled_dataset_q3 = [
     [12.24, 54.63, 169.14, 1972.66, 6281.8, ],  # clique
     [12.24, 54.63, 169.14, 1972.66, 6281.8, ],  # star
@@ -314,7 +314,7 @@ labelled_dataset_q7 = [
     [0.1,   2.65,   54.44,  850.16,   None, ], #pslg
     [0.46,  5.77,   79.31,  960.84,   6520.95, ], #big
     [3.754, 29.53,  289.12, 2461.031, None, ], #crys
-    [16.44, 8.82, 167.536,  "Timeout", "Timeout", ],
+    [16.44, 8.82, 167.536,  "Timeout", "Timeout", ], # multi
     [1.34, 9.98, 175.72, 2256.48, "Timeout", ],  # multiwaycfl
 ]
 labelled_dataset_q8 = [
@@ -417,15 +417,17 @@ def plot_bar(exp, title, x_labels, project, data):
     inf_log = int(np.log10(inf)) - 1
     ylocs = []
     yticks = []
-    for i in range(inf_log):
+    for i in range(inf_log + 1):
         ylocs.append(int(np.power(10, i)))
         yticks.append("$10^" + str(i) + "$")
 
-    ylocs.append(int(np.power(10, inf_log + 0.1)))
+    ylocs.append(int(np.power(10, inf_log + 0.5)))
     yticks.append(">3h")
+    yticks.append(">")
+    # the order of scala ticks and limit in this
+    plt.yscale('log')
     plt.yticks(ylocs, yticks, fontsize=14)
     plt.ylim((0.15, int(np.power(10, inf_log + 0.5))))
-    plt.yscale('log')
 
     # plot group
     for i, sub_proj in enumerate(project):
@@ -438,7 +440,8 @@ def plot_bar(exp, title, x_labels, project, data):
                    edgecolor='k', hatch=patterns[sub_proj], align="center")
         # for j, eachd in enumerate(data[i]):
         #     if eachd != 0 and 1 < eachd < 100:
-        #         ax.text(cur_loc[j] -0.05 , eachd, str(eachd), fontsize='14',  va='bottom')
+        #
+    #ax.text(0.2, ">3h", 3, fontsize='14', va='top')
 
     # plot group spliter
     cur_loc = location + len(project) * width - 0.03
@@ -470,7 +473,7 @@ def plog_legend(exp, title, x_labels, project, data):
         ylocs.append(int(np.power(10, i)))
         yticks.append("$10^" + str(i) + "$")
 
-    ylocs.append(int(np.power(10, inf_log)))
+    ylocs.append(int(np.power(10, inf_log+0.2)))
     yticks.append(">3h")
     plt.yticks(ylocs, yticks, fontsize=14)
 
@@ -508,7 +511,7 @@ if __name__ == '__main__':
     for name in vary_dataset_queries.keys():
         if is_legend:
             plog_legend('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
-        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
+        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
         plt.close()
         is_legend = False
 
