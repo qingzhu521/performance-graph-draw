@@ -283,7 +283,7 @@ labelled_dataset_q5 = [
     [0.93, 4.28, 34.86, 167.38, 586.72],  # multiwaycfl
 ]
 labelled_dataset_q6 = [
-    [1.16, 3.85, 15.08, 54.69, 114, ],  # clique
+    [1.37, 3.85, 15.08, 54.69, 114, ],  # clique
     [982, 3544.03, "Timeout", "Timeout", "Timeout", ],  # star
     [22.28, 27.91, 51.46, 122.62, None, ],  # psgl
     [1.08, 1.16, 1.49, 2.88, 7.04, ],  # big
@@ -291,7 +291,7 @@ labelled_dataset_q6 = [
     [52.49, 112.07, 306.42, 250.44, 807.09, ],  # multiway
     [0.65, 1.89, 7.07, 24.02, 57.76],  # multiwaycfl
 
-    [1.13, 3.81, 15.03, 54.6, 110, ],
+    [1.21, 3.81, 15.03, 54.6, 110, ],
     [980.4, 3535.56, "Timeout", "Timeout", "Timeout", ],
     [0.07, 0.04, 0.04, 2.07, None, ], #psgl
     [0.01, 0.03, 0.17, 0.98, 4.24, ], # big
@@ -307,32 +307,32 @@ labelled_dataset_q7 = [
     [1.55,  7.06,   82.53,  980.91,   6607.21, ],  # big
     [5.177, 32.288, 302.624,2547.834, None, ],  # crs
     [134.56,356.33, 1264.34,"Timeout", "Timeout", ],  # multi
-    [1.34,   9.98,   175.72, 2256.48, "Timeout", ],  # multiwaycfl
+    [1.34,   9.98,  175.72, 2256.48, "Timeout", ],  # multiwaycfl
 
     [1.16,  3.72,   14.22,  49,    138.3, ], #cli
     [2.69,  18.86,  297.14, None,    None, ], #star
     [0.1,   2.65,   54.44,  850.16,   None, ], #pslg
     [0.46,  5.77,   79.31,  960.84,   6520.95, ], #big
     [3.754, 29.53,  289.12, 2461.031, None, ], #crys
-    [16.44, 8.82, 167.536,  "Timeout", "Timeout", ], # multi
-    [1.34, 9.98, 175.72, 2256.48, "Timeout", ],  # multiwaycfl
+    [16.44, 8.82,   167.536,  "Timeout", "Timeout", ], # multi
+    [1.34, 9.98,    175.72, 2256.48, "Timeout", ],  # multiwaycfl
 ]
 labelled_dataset_q8 = [
-    [1.35, 4.29, 16.27, 55.63, 94.13, ],  # clique
-    [1000.7, 3642.74, "Timeout", "Timeout", "Timeout", ],  # star
-    [27.4, 58.95, 219.45, 932.3, None, ],  # psgl
-    [681.84, 7265.93, "Timeout", "Timeout", "Timeout", ],  # big
-    [590.059, 6251.741, "Timeout", "Timeout", "Timeout", ],  # crs
-    [53.26, 138.1, 826.88, 6702, "Timeout", ],  # multi
-    [8.2, 67.13, 665.73, 5651.29, "Timeout", ],  # multwaycfl
+    [2.89,      5.6,        16.27,      47.47,      94.13, ],  # clique
+    [1000.7,    3642.74,    "Timeout", "Timeout", "Timeout", ],  # star
+    [27.4,      58.95,      219.45,     932.3,      None, ],  # psgl
+    [681.84,    7265.93,    "Timeout", "Timeout", "Timeout", ],  # big
+    [590.059,   6251.741,   "Timeout", "Timeout", "Timeout", ],  # crs
+    [53.26,     138.1,      826.88,     6702,       "Timeout", ],  # multi
+    [8.2,       67.13,      665.73,     5651.29,    "Timeout", ],  # multwaycfl
 
-    [1.13, 3.55, 12.61, 39.94, 82, ],  # clique
-    [984.28, 3558.21, "Timeout", "Timeout", "Timeout", ],  # star
-    [5.01, 23.91, 128.6, 658.42, None, ],  # psgl
-    [680.12, 7262.55, "Timeout", "Timeout", "Timeout", ],  # big
-    [588.187, 6245.795, "Timeout", "Timeout", "Timeout", ],  # crystal
-    [8.7, 69.801, 664.39, 6279.73, "Timeout", ],  # multiway
-    [8.2, 67.13, 665.73, 5651.29, "Timeout", ],  # multwaycfl
+    [1.14,      3.57,       12.61,      39.94,      82, ],  # clique
+    [984.28,    3558.21,    "Timeout", "Timeout", "Timeout", ],  # star
+    [5.01,      23.91,      128.6,      658.42,     None, ],  # psgl
+    [680.12,    7262.55,    "Timeout", "Timeout", "Timeout", ],  # big
+    [588.187,   6245.795,   "Timeout", "Timeout", "Timeout", ],  # crystal
+    [8.7,       69.801,     664.39,      6279.73,   "Timeout", ],  # multiway
+    [8.2,       67.13,      665.73,      5651.29,   "Timeout", ],  # multwaycfl
 ]
 
 
