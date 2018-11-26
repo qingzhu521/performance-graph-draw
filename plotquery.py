@@ -236,7 +236,7 @@ labelled_dataset_q3 = [
     [43.582, 207.028, 1354.557, 7237.453, "Timeout", ],  # big
     [43.582, 207.028, 1354.557, 7237.453, "Timeout", ],  # crs
     [105.17, 447.19, "Timeout", "Timeout", None, ],  # multiway
-    [38.88, 278.46, 1647.96, "Timeout", "Timeout", ],  # multicfl
+    [38.88, 278.46, 1647.96, "Timeout", None, ],  # multicfl
 
     [6.44, 27.85, 132.57, 1300, 3673.2, ],  # clique
     [6.44, 27.85, 132.57, 1300, 3673.2, ],  # star
@@ -244,7 +244,7 @@ labelled_dataset_q3 = [
     [38.117, 188.771, 1272.509, 6933.427, "Timeout", ],  # big
     [38.117, 188.771, 1272.509, 6933.427, "Timeout", ],  # crs
     [52.88, 317.63, "Timeout", "Timeout", None, ],  # multiway
-    [38.88, 278.46, 1647.96, "Timeout", "Timeout", ],  # multicfl
+    [38.88, 278.46, 1647.96, "Timeout", None, ],  # multicfl
 ]
 
 labelled_dataset_q4 = [
