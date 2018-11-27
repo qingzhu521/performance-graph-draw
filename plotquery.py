@@ -30,13 +30,13 @@ vary_dataset_q1 = [
     [None, 36.28, None, None, None, ],  # psgl
     [None, 1.51, 158.5, 1454.72, 2630.75, ],  # bigjoin
     [None, 1.51,  158.5, 1454.72, 2630.75, ],  # crystaljoin
-    ["Timeout", 315.03, 1708.81, "Timeout", None, ],  # multiwayjoin
+    [None, 315.03, 1708.81, None, None, ],  # multiwayjoin
 
     [None, 2.1, 297, None, None, ],  # cliquejoin
     [None, 4.25, None, None, None, ],  # psgl
     [None, 0.74, 132.01, 1195.78, 2320.95, ],  # bigjoin
     [None, 0.74, 132.01, 1195.78, 2320.95, ],  # crystaljoin
-    ["Timeout", 241.739, 1610.13, "Timeout", None, ],  # multiwayjoin
+    [None, 241.739, 1610.13, None, None, ],  # multiwayjoin
 ]
 
 vary_dataset_q2 = [
@@ -45,13 +45,13 @@ vary_dataset_q2 = [
     [None, 26.25, None, None, None, ],  # psgl
     [1678.04, 2.02, 128.96, 379.12, 4027.17, ],  # big
     [27.82, 3.16, 11.83, 44.31, 103.06, ],  # crys
-    ["Timeout", 342.39, 2601, "Timeout", None, ],  # multiway
+    [None, 342.39, 2601, None, None, ],  # multiway
 
     [166.91, 1.1, 34, 89, 566, ],  # clique
     [None, 1.02, None, None, None, ],
     [1434.41, 0.97, 101.34, 271.97, 2322.92, ],  # big
     [16.2, 1.16, 8.83, 36.31, 83.06, ],  # crys
-    ["Timeout", 257.967, 2258.24, "Timeout", None, ],  # multiway
+    [None, 257.967, 2258.24, None, None, ],  # multiway
 ]
 
 vary_dataset_q3 = [
@@ -60,13 +60,13 @@ vary_dataset_q3 = [
     [None, 29.41, None, None, None, ],  # psgl
     [301.83, 1.2, 43.19, 105.39, 625.92, ],  # big
     [301.83, 1.2, 43.19, 105.39, 625.92, ],  # crys
-    ["Timeout", 322.97, 1113.85, "Timeout", None, ],  # multiway
+    [None, 322.97, 1113.85, None, None, ],  # multiway
 
     [47.83, 1.54, 9, 8, 23.1, ],  # clique
     [None, 1.09, None, None, None, ],  # psgl
     [300.83, 0.48, 31.49, 80.64, 448.27, ],  # big
     [300.83, 0.48, 31.49, 80.64, 448.27, ],  # cry
-    ["Timeout", 231.732, 1021.44, "Timeout", None, ],  # multiway
+    [None, 231.732, 1021.44, None, None, ],  # multiway
 ]
 vary_dataset_q4 = [
     # GP,   US,            LJ,       OK,       UK02
@@ -74,13 +74,13 @@ vary_dataset_q4 = [
     [None, 39.29, None, None, None, ],  # psgl
     [None, 4.18, "Timeout", None, "Timeout", ],  # big
     ["Timeout", 7.16, 2694.19, "Timeout", "Timeout", ],  # crys
-    ["Timeout", 295.17, "Timeout", "Timeout", None, ],  # multiway
+    [None, 295.17, None, None, None, ],  # multiway
 
     [None, 4.2, None, None, None, ],
     [None, 8.02, None, None, None, ],
     [None, 1.03, "Timeout", None, "Timeout", ],
     ["Timeout", 4.16, 2600.19, "Timeout", "Timeout", ],  # crys
-    ["Timeout", 207.077, "Timeout", "Timeout", None, ],
+    [None, 207.077, None, None, None, ], # multiway
 ]
 vary_dataset_q5 = [
     # GP,               US,            LJ,       OK,       UK02
@@ -88,13 +88,13 @@ vary_dataset_q5 = [
     [None, 25.68, None, None, None, ],  # psgl
     [None, 2.45, None, "Timeout", "Timeout", ],  # big
     ["Timeout", 4.71,  717.74, 1578.69, "Timeout", ],  # crys
-    ["Timeout", 250.23, "Timeout", "Timeout", None, ],  # multiway
+    [None, 250.23, None, None, None, ],  # multiway
 
     [None, 2.6, None, None, None, ],  # clique
     [None, 1.08, None, None, None, ],  # psgl
     [None, 0.98, None, "Timeout", "Timeout", ],  # big
     ["Timeout", 0.971,  627.74, 1412.69, "Timeout", ],  # crys
-    ["Timeout", 165.475, "Timeout", "Timeout", None, ],  # multiway
+    [None, 165.475, None, None, None, ],  # multiway
 
 ]
 vary_dataset_q6 = [
@@ -103,13 +103,13 @@ vary_dataset_q6 = [
     [None, 27.11, None, "Timeout", None, ],  # psgl
     [None, 1.22, 1996.52, 622.47, "Timeout", ],  # big
     [None, 1.22, 1996.52, 622.47, "Timeout", ],  # crys
-    ["Timeout", 240.1, "Timeout", "Timeout", None, ],  # multiway
+    [None, 240.1, None, None, None, ],  # multiway
 
     [2835.23, 2.28, 69, 41, 1189, ],
     [None, 0.17, None, "Timeout", None, ],
     [None, 0.48, 1363.66, 450.96, "Timeout", ],
     [None, 0.48, 1363.66, 450.96, "Timeout", ], # crys
-    ["Timeout", 140.554, "Timeout", "Timeout", None, ],
+    [None, 140.554, None, None, None, ], # multiway
 ]
 vary_dataset_q7 = [
     #  GP,       US,             LJ,       OK,       UK02
@@ -117,13 +117,13 @@ vary_dataset_q7 = [
     [None, 26.81, None, "Timeout", None, ],  # psgl
     [None, 4.52, None, None, None, ],  # big
     ["Timeout", 12.12, "Timeout", "Timeout", None, ],  # crys
-    ["Timeout", 460.1, "Timeout", "Timeout", None, ],  # multiway
+    [None, 460.1, None, None, None, ],  # multiway
 
     [None, 1.2, None, None, None, ],
     [None, 2.03, None, "Timeout", None, ],
     [None, 1.99, None, None, None, ],
     ["Timeout", 5.12, "Timeout", "Timeout", None, ],
-    ["Timeout", 271.94, "Timeout", "Timeout", None, ],
+    [None, 271.94, None, None, None, ], # multiway
 ]
 vary_dataset_q8 = [
     # GP,           US,                LJ,           OK,       UK02
@@ -131,13 +131,13 @@ vary_dataset_q8 = [
     [None, 26.71, None, "Timeout", None, ],  # psgl
     [None, 1.3, "Timeout", 3674.96, None, ],  # big
     [None, 1.3, "Timeout", 3674.96, None, ],  # crys
-    ["Timeout", 556.1, "Timeout", "Timeout", None, ],  # multiway
+    [None, 556.1, None, None, None, ],  # multiway
 
     ["Timeout", 3.18, 2657, 102, "Timeout", ],  # clique
     [None, 0.08, None, "Timeout", None, ],  # psgl
     [None, 0.48, "Timeout", 2451.15, None, ],  # big
     [None, 0.48, "Timeout", 2451.15, None, ],  # crys
-    ["Timeout", 273.122, "Timeout", "Timeout", None, ],  # multiway
+    [None, 273.122, None, None, None, ],  # multiway
 ]
 vary_dataset_q9 = [
     # GP,     US,                 LJ,       OK,       UK02
@@ -145,13 +145,13 @@ vary_dataset_q9 = [
     [None, 27.78, None, None, None, ],  # psgl
     [None, 4.18, "Timeout", None, None, ],  # big
     ["Timeout", 12.74, 5772.82, "Timeout", "Timeout", ],  # crys
-    ["Timeout", 251.11, "Timeout", "Timeout", None, ],  # multiway
+    [None, 251.11, None, None, None, ],  # multiway
 
     [None, 1.1, None, None, None, ],  # clique
     [None, 2.09, None, None, None, ],  # psgl
     [None, 1.97, "Timeout", None, None, ],  # big
     ["Timeout", 4.74, 5072.82, "Timeout", "Timeout", ],  # crys
-    ["Timeout", 192.21, "Timeout", "Timeout", None, ],  # multiway
+    [None, 192.21, None, None, None, ],  # multiway
 ]
 
 vary_query_gp = [
@@ -162,7 +162,7 @@ vary_query_gp = [
     # psgl
     [4.07, None, 1678.04, 301.83, None, None, None, None, None, None, ],  # bigjoin
     [4.07, None, 27.82, 301.83, None, None, None, None, None, None, ],  # crys
-    [155.06, 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', 'Timeout', ],# multiway
+    [155.06, None, None, None, None, None, None, None, None, None, ],# multiway
 ]
 
 vary_query_us = [
@@ -235,7 +235,7 @@ labelled_dataset_q3 = [
     [47.2, 104.55, None, None, None, ],  # psgl
     [43.582, 207.028, 1354.557, 7237.453, "Timeout", ],  # big
     [43.582, 207.028, 1354.557, 7237.453, "Timeout", ],  # crs
-    [105.17, 447.19, "Timeout", "Timeout", None, ],  # multiway
+    [105.17, 447.19, None, None, None, ],  # multiway
     [38.88, 278.46, 1647.96, "Timeout", None, ],  # multicfl
 
     [6.44, 27.85, 132.57, 1300, 3673.2, ],  # clique
@@ -243,7 +243,7 @@ labelled_dataset_q3 = [
     [12, 52.37, None, None, None, ],  # psgl
     [38.117, 188.771, 1272.509, 6933.427, "Timeout", ],  # big
     [38.117, 188.771, 1272.509, 6933.427, "Timeout", ],  # crs
-    [52.88, 317.63, "Timeout", "Timeout", None, ],  # multiway
+    [52.88, 317.63, None, None, None, ],  # multiway
     [38.88, 278.46, 1647.96, "Timeout", None, ],  # multicfl
 ]
 
@@ -253,7 +253,7 @@ labelled_dataset_q4 = [
     [181.32, None, None, None, None, ],  # psgl
     [78.37, 381.04, 1013.16, 3405.27, 8315.56],  # big
     [2.904, 7.326, 21.84, 75.682, 173.091, ],  # crs
-    [201.99, 1146.06, "Timeout", None, None, ],  # multiway
+    [201.99, 1146.06, None, None, None, ],  # multiway
     [3.72, 12.68, 57.25, 198.51, 468.19],  # multiwaycfl
 
     [0.36, 1.1, 3.44, 10.04, 21.02, ],# clique
@@ -261,7 +261,7 @@ labelled_dataset_q4 = [
     [53.98, None, None, None, None, ], # psgl
     [69.15, 342.81, 885.15, 3038.39, 7430.86, ],# big
     [1.797, 5.336, 16.004, 57.086, 125.286, ], #crs
-    [161.88, 1051.5, "Timeout", None, None, ], # multiway
+    [161.88, 1051.5, None, None, None, ], # multiway
     [3.72, 12.68, 57.25, 198.51, 468.19],  # multiwaycfl
 ]
 
@@ -296,7 +296,7 @@ labelled_dataset_q6 = [
     [0.07, 0.04, 0.04, 2.07, None, ], #psgl
     [0.01, 0.03, 0.17, 0.98, 4.24, ], # big
     [0.584, 3.136, 17.386, 79.136, 287.47, ], #crs
-    [10.45, 3.35, 10.975, 46.2638, 115.661, ],
+    [10.45, 3.35, 10.975, 46.2638, 115.661, ], #multiway
     [0.65, 1.89, 7.07, 24.02, 57.76],  # multiwaycfl
 ]
 
@@ -306,7 +306,7 @@ labelled_dataset_q7 = [
     [20.33, 47.03,  235.92, 2331.5,   None, ],  # psgl
     [1.55,  7.06,   82.53,  980.91,   6607.21, ],  # big
     [5.177, 32.288, 302.624,2547.834, None, ],  # crs
-    [134.56,356.33, 1264.34,"Timeout", None, ],  # multi
+    [134.56,356.33, 1264.34, None, None, ],  # multi
     [1.34,   9.98,  175.72, 2256.48, "Timeout", ],  # multiwaycfl
 
     [1.16,  3.72,   14.22,  49,    138.3, ], #cli
@@ -314,7 +314,7 @@ labelled_dataset_q7 = [
     [0.1,   2.65,   54.44,  850.16,   None, ], #pslg
     [0.46,  5.77,   79.31,  960.84,   6520.95, ], #big
     [3.754, 29.53,  289.12, 2461.031, None, ], #crys
-    [16.44, 8.82,   167.536,  "Timeout", None, ], # multi
+    [16.44, 8.82,   167.536,  None,  None, ], # multi
     [1.34, 9.98,    175.72, 2256.48, "Timeout", ],  # multiwaycfl
 ]
 labelled_dataset_q8 = [
@@ -323,7 +323,7 @@ labelled_dataset_q8 = [
     [27.4,      58.95,      219.45,     932.3,      None, ],  # psgl
     [681.84,    7265.93,    "Timeout", "Timeout", "Timeout", ],  # big
     [590.059,   6251.741,   "Timeout", "Timeout", "Timeout", ],  # crs
-    [53.26,     138.1,      826.88,     6702,       "Timeout", ],  # multi
+    [53.26,     138.1,      826.88,     6702,       None, ],  # multi
     [8.2,       67.13,      665.73,     5651.29,    "Timeout", ],  # multwaycfl
 
     [1.14,      3.57,       12.61,      39.94,      82, ],  # clique
@@ -331,7 +331,7 @@ labelled_dataset_q8 = [
     [5.01,      23.91,      128.6,      658.42,     None, ],  # psgl
     [680.12,    7262.55,    "Timeout", "Timeout", "Timeout", ],  # big
     [588.187,   6245.795,   "Timeout", "Timeout", "Timeout", ],  # crystal
-    [8.7,       69.801,     664.39,      6279.73,   "Timeout", ],  # multiway
+    [8.7,       69.801,     664.39,      6279.73,   None, ],  # multiway
     [8.2,       67.13,      665.73,      5651.29,   "Timeout", ],  # multwaycfl
 ]
 
@@ -431,14 +431,14 @@ def plot_bar(exp, title, x_labels, project, data):
     # plot group
     for i, sub_proj in enumerate(project):
         cur_loc = location + i * width
-        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=color[sub_proj], edgecolor='k',
+        curcol = color if exp != 'vary_queries'else revcolor
+        ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=curcol[sub_proj], edgecolor='k',
                hatch=patterns[sub_proj], align="center")
         if exp.endswith("dataset"):
             ax.bar(cur_loc, data[i + num_y], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj],
                    edgecolor='k', hatch=patterns[sub_proj], align="center")
         # for j, eachd in enumerate(data[i]):
         #     if eachd != 0 and 1 < eachd < 100:
-    #ax.text(0.2, ">3h", 3, fontsize='14', va='top')
 
     # plot group spliter
     cur_loc = location + len(project) * width - 0.03
@@ -497,7 +497,7 @@ if __name__ == '__main__':
     for name in vary_dataset_queries.keys():
         # if is_legend:
         #     plog_legend('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
-        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
+        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
         print(name)
         plt.close()
         is_legend = False
@@ -533,7 +533,7 @@ if __name__ == '__main__':
     for name in var_query_datasets.keys():
         # if is_legend:
         #     plog_legend('vary_queries', name, xlabel, algs, var_query_datasets[name])
-        #plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name])
+        plot_bar('vary_queries', name, xlabel, algs, var_query_datasets[name])
         plt.close()
         is_legend = False
 
