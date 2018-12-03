@@ -114,13 +114,13 @@ vary_dataset_q6 = [
 vary_dataset_q7 = [
     #  GP,       US,             LJ,       OK,       UK02
     [None, 12.2, None, None, None, ],  # clique
-    [None, 26.81, None, "Timeout", None, ],  # psgl
+    [None, 26.81, None, None, None, ],  # psgl
     [None, 4.52, None, None, None, ],  # big
     ["Timeout", 12.12, "Timeout", "Timeout", None, ],  # crys
     [None, 460.1, None, None, None, ],  # multiway
 
     [None, 1.2, None, None, None, ],
-    [None, 2.03, None, "Timeout", None, ],
+    [None, 2.03, None, None, None, ],
     [None, 1.99, None, None, None, ],
     ["Timeout", 5.12, "Timeout", "Timeout", None, ],
     [None, 271.94, None, None, None, ], # multiway
@@ -128,13 +128,13 @@ vary_dataset_q7 = [
 vary_dataset_q8 = [
     # GP,           US,                LJ,           OK,       UK02
     ["Timeout", 3.2, 4671, 106, "Timeout", ],  # clique
-    [None, 26.71, None, "Timeout", None, ],  # psgl
+    [None, 26.71, None, None, None, ],  # psgl
     [None, 1.3, "Timeout", 3674.96, None, ],  # big
     [None, 1.3, "Timeout", 3674.96, None, ],  # crys
     [None, 556.1, None, None, None, ],  # multiway
 
     ["Timeout", 3.18, 2657, 102, "Timeout", ],  # clique
-    [None, 0.08, None, "Timeout", None, ],  # psgl
+    [None, 0.08, None, None, None, ],  # psgl
     [None, 0.48, "Timeout", 2451.15, None, ],  # big
     [None, 0.48, "Timeout", 2451.15, None, ],  # crys
     [None, 273.122, None, None, None, ],  # multiway
@@ -270,7 +270,7 @@ labelled_dataset_q5 = [
     [0.74, 2.05, 6.83, 21.11, 43.86],  # star
     [21.87, 32.79, 84.19, 223.56, None, ],  # psgl
     [2.61, 6.14, 28.96, 125.22, 419.64],  # big
-    [53.773, 552.943, 6260.181, "Timeout", None, ],  # crs
+    [2.61, 6.14, 28.96, 125.22, 419.64],  # crs
     [48.42, 69.05, 241.08, 508.78, 1555.33],  # multiway
     [0.93, 4.28, 34.86, 167.38, 586.72],  # multiwaycfl
 
@@ -278,7 +278,7 @@ labelled_dataset_q5 = [
     [0.6, 1.76, 5.72, 17.32, 37.13, ],
     [0.04, 2.05, 11.43, 49.64, None, ],
     [1.04, 4.91, 27.23, 121.96, 411.5, ],
-    [52.598, 548.044, 6188.653, "Timeout", None, ], #crs
+    [1.04, 4.91, 27.23, 121.96, 411.5, ],   #crs
     [3.98, 1.48, 8.35, 254.749, 916.436, ],
     [0.93, 4.28, 34.86, 167.38, 586.72],  # multiwaycfl
 ]
@@ -363,6 +363,15 @@ def assign_inf(data):
 patterns = {
     'CliqueJoin': '',
     'StarJoin': '-',
+    'PSgL': '//',
+    'BigJoin': '..',
+    'CrystalJoin': '\\\\',
+    'MultiwayJoin': 'xx',
+}
+
+patterns1 = {
+    'CliqueJoin': '',
+    'StarJoin': '|',
     'PSgL': '//',
     'BigJoin': '..',
     'CrystalJoin': '\\\\',
@@ -466,7 +475,7 @@ def plog_legend(exp, title, x_labels, project, data):
     for i, sub_proj in enumerate(project):
         cur_loc = location + i * width
         ax.bar(cur_loc, data[i], tick_label=x_labels, width=width, label=sub_proj, color=revcolor[sub_proj], edgecolor='k',
-               hatch=patterns[sub_proj], align="center")
+               hatch=patterns1[sub_proj], align="center")
     # Plot the legend in a separate figure
     legend_fig = plt.figure(figsize=(1.4*len(project), 0.2))
     lax = legend_fig.add_subplot(111)
@@ -497,7 +506,7 @@ if __name__ == '__main__':
     for name in vary_dataset_queries.keys():
         # if is_legend:
         #     plog_legend('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
-        #plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
+        plot_bar('vary_dataset', name, vary_dataset_datasets, algs, vary_dataset_queries[name])
         print(name)
         plt.close()
         is_legend = False
@@ -517,8 +526,8 @@ if __name__ == '__main__':
     vary_labelled_datasets = ['DG01', 'DG03', 'DG10', 'DG30', 'DG60']
     is_legend = True
     for name in vary_labelled_queries.keys():
-        # if is_legend:
-        #     plog_legend('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
+        if is_legend:
+            plog_legend('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
         print(name)
         plot_bar('vary_labelled_dataset', name, vary_labelled_datasets, label_algs, vary_labelled_queries[name])
         plt.close()
